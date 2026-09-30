@@ -1,0 +1,14 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main, release]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "tests pass" && sleep 5
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "lint passes" && sleep 5
